@@ -36,7 +36,7 @@ words presented close together in time in sequence, reflecting a form of
 temporal binding.
 This  contiguity effect is observed under many different experimental
 conditions.  In order to understand the boundaries of the contiguity effect,
-we measured the tcontiguity effect at presentation rates from
+we measured the contiguity effect at presentation rates from
 2~Hz (one word every 500~ms) to 8~Hz (one word every 125~ms). The contiguity
 effect broke down as presentation rate increased.  This frequency matches the
 upper bound of neural-related theta frequency, which has been linked to
@@ -57,24 +57,19 @@ This distance is measured as lag, a directed distance between any two items in
 a study list. For example, in the list ``absence, hollow, pupil, river,
 darling'', the lag from absence to river is $+3$, while the lag from darling to
 pupil is $-2$.  
-In free recall studies contiguity effect is typically asymmetric, such that
+In free recall studies the contiguity effect is typically asymmetric, such that
 forward transitions are more likely to take place than backward transitions of
 the same distance.  This effect is robust, appearing across a variety of
 methodological manipulations \cite{Kaha12,HealKaha14}. 
 For instance, the contiguity effect is observed with more or less the same
 properties for lists of different modalities \cite{Kaha96}, when rehearsal is
-discouraged \cite{HowaKaha99}, when words are widely separated in time
+discouraged \cite{HowaKaha99}, and when words are widely separated in time
 \cite{HowaEtal08,Unsw08}.  \citeA{HealKaha14} noted that the contiguity effect
 was observed for every individual participant in a large scale free recall
 study.   Thus far, dramatic effects on the contiguity effect in free recall
 have primarily been observed comparing patient populations; older adults and
 memory disordered individuals show impaired contiguity effects
 \cite{KahaEtal02,PaloEtal19}.
-% The Palombo citation is:
-%Medial temporal lobe amnesia is associated with a deficit in recovering
-%temporal context 
-%DJ Palombo, JM Di Lascio, MW Howard, M Verfaellie
-%Journal of cognitive neuroscience 31 (2), 236-248
 
 
 Beyond the contiguity effect, free recall contains many other well-explored
@@ -114,7 +109,7 @@ disrupted.  A to-be-remembered stimulus typically evokes a P300 waveform
 approximately 500~ms in duration that is thought to represent the updating of
 memory representations, even when the stimulus duration itself is on the order
 of 2 seconds \cite{Donc81}.
-A presentation rates approaching 10~Hz, there is evidence that individual list
+At presentation rates approaching 10~Hz, there is evidence that individual list
 items are no longer processed as discrete items, and instead are merged into a
 single extended cognitive event.  For example, individual items in 10~Hz lists
 receive very low hit rates in an immediate recognition test even when the
@@ -162,8 +157,8 @@ recorded and later parsed using a semi-automatic speech parsing algorithm.
 
 We examined whether presentation rate affected either the average number of
 valid recalls in a trial or median response latencies. This was done with a
-repeated measures ANOVA. Post-hoc paired permutations (5000 iterations) and
-Cohen's D effect sizes on mean recalls and median response latencies were then
+repeated measures ANOVA. Post-hoc paired permutations (5000 iterations),
+Cohen's D effect sizes on mean recalls, and median response latencies were then
 performed to determine significant differences. Serial position curves (SPC),
 were computed to show the overall probability of a word being recalled based
 on its position in the list for each participant. We examined whether the recency
@@ -184,8 +179,10 @@ conditions, we restricted the lag-CRP analysis to transitions within the
 middle of the list where probability of recall was approximately equal across
 presentation rates.
 In order to test for differences in the CRP at each
-lag across conditions, we performed a mixed-effects logistic regression,
-estimating the CRP as a function of the
+lag across conditions, we performed a number of mixed-effects logistic regressions. 
+First, to examine the existence of contiguity effects at each rate,
+we estimated the probability of recall based on absolute lag from the previously
+recalled word for each presentation rate separately. Next, we estimated the full CRP as a function of the
 interaction between the following fixed-effects predictors: absolute lag, its
 direction (backwards or forwards from the previously recalled item), and 
 presentation rate. We report Z- and T-scored coefficients for all
@@ -298,19 +295,23 @@ recalled word to a word at a given lag (with lag~0 corresponding to
 the diagonal of the matrices in Figure~4), and appears to show a reduction in
 the temporal contiguity effect as the presentation rate increases. We
 performed a mixed effect logistic regression to estimate the probability of
-recall based on the interaction between absolute lag, its direction (backwards
+recall based on absolute lag for each presentation rate separately. This showed 
+that distance from the previously-recalled item significantly decreased the probability
+of recall for 2~Hz ($z=-9.74, p<0.001$) and 4~Hz ($z=-4.93, p<0.001$), but not for 8~Hz ($z=-0.70, p=0.48$).
+This suggests that the contiguity effect breaks at around 8~Hz.
+We then computed another mixed effects logistic regression to test 
+the interaction between absolute lag, its direction (backwards
 or forwards from the previously recalled item), and the presentation rate.
 This analysis showed that transitions in the forward direction were more
 probable than backward transitions ($z = 4.18, p<0.001$); transitions at more
 distant lags were less probable ($z=-4.83, p<0.001$); probabilities were
-higher for 2 Hz compared to
-4 Hz ($z=-2.28, p=0.02$) and 8 Hz ($z=-3.63, p<0.001$); the effect of absolute
-lag was stronger for forward transitions than backwards transitions ($z=-2.71,
+higher for 2 Hz compared to 4 Hz ($z=-2.28, p=0.02$) and 8 Hz ($z=-3.63, p<0.001$); 
+the effect of absolute lag was stronger for forward transitions than backwards transitions ($z=-2.71,
 p<0.01$), and the effect of lag was stronger for 2~Hz compared to 4~Hz
 ($z=2.11, p=0.03$) and 8~Hz ($z=3.12, p<0.01$). All other interactions showed
 no significant effects (all $p>0.05$). These results show that increasing the
 presentation rate of study words has a negative effect on the temporal
-contiguity effect particularly at 8~Hz.
+contiguity effect, and nullifies it at 8~Hz.
 % Would be nice to say a little more here.  Is the contiguity effect abolished
 % at 8 Hz?  Is it not abolished at 4 Hz?  
 
